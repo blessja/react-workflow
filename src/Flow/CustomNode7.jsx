@@ -1,14 +1,14 @@
 import { memo, FC, CSSProperties } from "react";
 import { Handle, Position, NodeProps } from "reactflow";
-import CodeIcon from "@material-ui/icons/Code";
+import GTranslateIcon from "@material-ui/icons/GTranslate";
 
-const sourceHandleStyleA: CSSProperties = { left: 300 };
+const sourceHandleStyleA: CSSProperties = { left: 50 };
 const sourceHandleStyleB: CSSProperties = {
   right: 50,
   left: "auto",
 };
 
-const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
+const CustomNode7: FC<NodeProps> = ({ data, xPos, yPos }) => {
   return (
     <>
       <Handle type="target" position={Position.Top} />
@@ -21,23 +21,28 @@ const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
       >
         <div
           style={{
-            backgroundColor: "#475569",
+            backgroundColor: "#38bdf8",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             width: "50px",
           }}
         >
-          <CodeIcon />
+          <GTranslateIcon />
         </div>
-        <div>
-          <p style={{ color: "yellow" }}>{data.label}</p>
-          <p>
-            x=
-            {
-              "{List1:[{name:'blessing',surname:'jackson'}{name:'bless',surname:'jack'}]}"
-            }
-          </p>
+        <div style={{ backgroundColor: "#3f3f46" }}>
+          <p style={{ color: "white" }}>Recognize text Google</p>
+        </div>
+        <div
+          style={{
+            backgroundColor: "#38bdf8",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "50px",
+          }}
+        >
+          <GTranslateIcon />
         </div>
       </div>
 
@@ -57,4 +62,4 @@ const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
   );
 };
 
-export default memo(CustomNode);
+export default memo(CustomNode7);

@@ -1,14 +1,14 @@
 import { memo, FC, CSSProperties } from "react";
 import { Handle, Position, NodeProps } from "reactflow";
-import CodeIcon from "@material-ui/icons/Code";
+import MergeTypeIcon from "@material-ui/icons/MergeType";
 
-const sourceHandleStyleA: CSSProperties = { left: 300 };
+const sourceHandleStyleA: CSSProperties = { left: 50 };
 const sourceHandleStyleB: CSSProperties = {
   right: 50,
   left: "auto",
 };
 
-const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
+const CustomNode8: FC<NodeProps> = ({ data, xPos, yPos }) => {
   return (
     <>
       <Handle type="target" position={Position.Top} />
@@ -28,15 +28,12 @@ const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
             width: "50px",
           }}
         >
-          <CodeIcon />
+          <MergeTypeIcon />
         </div>
         <div>
-          <p style={{ color: "yellow" }}>{data.label}</p>
           <p>
-            x=
-            {
-              "{List1:[{name:'blessing',surname:'jackson'}{name:'bless',surname:'jack'}]}"
-            }
+            <p style={{ color: "yellow" }}>{data.label}</p>
+            If <strong>condition</strong> then
           </p>
         </div>
       </div>
@@ -57,4 +54,4 @@ const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
   );
 };
 
-export default memo(CustomNode);
+export default memo(CustomNode8);
