@@ -1,5 +1,5 @@
 import { memo, FC, CSSProperties } from 'react';
-import { Handle, Position, NodeProps, } from 'reactflow';
+import { Handle, Position, NodeProps } from 'reactflow';
 
 const sourceHandleStyleA: CSSProperties = { left: 50 };
 const sourceHandleStyleB: CSSProperties = {
@@ -13,7 +13,7 @@ const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
       <Handle type="target" position={Position.Top} />
       <div>
         <div>
-          {/* Label: <strong>{data.label}</strong> */}
+          Label: <strong>{data.label}</strong>
         </div>
         <div>
           Position:{' '}
@@ -22,7 +22,7 @@ const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
           </strong>
         </div>
       </div>
-      
+
       <Handle
         type="source"
         position={Position.Bottom}
@@ -35,7 +35,6 @@ const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
         id="b"
         style={sourceHandleStyleB}
       />
-      
     </>
   );
 };
