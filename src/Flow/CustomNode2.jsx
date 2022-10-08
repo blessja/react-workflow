@@ -2,7 +2,7 @@ import { memo, FC, CSSProperties } from "react";
 import { Handle, Position, NodeProps } from "reactflow";
 import GTranslateIcon from "@material-ui/icons/GTranslate";
 
-const sourceHandleStyleA: CSSProperties = { left: 50 };
+const sourceHandleStyleA: CSSProperties = { left: 150 };
 const sourceHandleStyleB: CSSProperties = {
   right: 50,
   left: "auto",
@@ -11,7 +11,7 @@ const sourceHandleStyleB: CSSProperties = {
 const CustomNode2: FC<NodeProps> = ({ data, xPos, yPos }) => {
   return (
     <>
-      <Handle type="target" position={Position.Top} />
+      <Handle type="source" position={Position.Top} />
       <div
         style={{
           display: "flex",
@@ -21,7 +21,7 @@ const CustomNode2: FC<NodeProps> = ({ data, xPos, yPos }) => {
       >
         <div
           style={{
-            backgroundColor: "#38bdf8",
+            backgroundColor: "#0284c7",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -31,11 +31,13 @@ const CustomNode2: FC<NodeProps> = ({ data, xPos, yPos }) => {
           <GTranslateIcon />
         </div>
         <div style={{ backgroundColor: "#3f3f46" }}>
-          <p style={{ color: "white" }}>Recognize text Google</p>
+          <p style={{ color: "white", margin: "20px" }}>
+            Recognize text Google
+          </p>
         </div>
         <div
           style={{
-            backgroundColor: "#38bdf8",
+            backgroundColor: "#0284c7",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -47,7 +49,7 @@ const CustomNode2: FC<NodeProps> = ({ data, xPos, yPos }) => {
       </div>
 
       <Handle
-        type="source"
+        type="target"
         position={Position.Bottom}
         id="a"
         style={sourceHandleStyleA}

@@ -19,37 +19,10 @@ const CustomNode10: FC<NodeProps> = ({ data, xPos, yPos }) => {
           justifyContent: "space-between",
         }}
       >
-        <div
-          style={{
-            backgroundColor: "#475569",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "50px",
-          }}
-        >
-          <MergeTypeIcon />
-        </div>
-        <div>
-          <p>
-            <p style={{ color: "yellow" }}>{data.label}</p>
-            If <strong>condition</strong> then
-          </p>
+        <div className="start">
+          <p style={{ color: "#166534" }}>{data.label}</p>
         </div>
       </div>
-
-      <Handle
-        type="source"
-        position={Position.Bottom}
-        id="a"
-        style={sourceHandleStyleA}
-      />
-      <Handle
-        type="source"
-        position={Position.Bottom}
-        id="b"
-        style={sourceHandleStyleB}
-      />
     </>
   );
 };

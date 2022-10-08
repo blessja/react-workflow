@@ -1,6 +1,6 @@
 import { memo, FC, CSSProperties } from "react";
 import { Handle, Position, NodeProps } from "reactflow";
-import GTranslateIcon from "@material-ui/icons/GTranslate";
+import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 
 const sourceHandleStyleA: CSSProperties = { left: 50 };
 const sourceHandleStyleB: CSSProperties = {
@@ -11,53 +11,20 @@ const sourceHandleStyleB: CSSProperties = {
 const CustomNode7: FC<NodeProps> = ({ data, xPos, yPos }) => {
   return (
     <>
-      <Handle type="target" position={Position.Top} />
       <div
         style={{
+          backgroundColor: "#075985",
           display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "auto",
         }}
       >
-        <div
-          style={{
-            backgroundColor: "#38bdf8",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "50px",
-          }}
-        >
-          <GTranslateIcon />
-        </div>
-        <div style={{ backgroundColor: "#3f3f46" }}>
-          <p style={{ color: "white" }}>Recognize text Google</p>
-        </div>
-        <div
-          style={{
-            backgroundColor: "#38bdf8",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "50px",
-          }}
-        >
-          <GTranslateIcon />
-        </div>
+        <p style={{ padding: "10px", color: "white" }}>
+          (x) Assign value to variable
+        </p>
+        <CheckBoxOutlineBlankIcon />
       </div>
-
-      <Handle
-        type="source"
-        position={Position.Bottom}
-        id="a"
-        style={sourceHandleStyleA}
-      />
-      <Handle
-        type="source"
-        position={Position.Bottom}
-        id="b"
-        style={sourceHandleStyleB}
-      />
     </>
   );
 };

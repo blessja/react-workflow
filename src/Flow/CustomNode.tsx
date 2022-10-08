@@ -21,7 +21,7 @@ const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
       >
         <div
           style={{
-            backgroundColor: "#475569",
+            backgroundColor: "#facc15",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -31,8 +31,15 @@ const CustomNode: FC<NodeProps> = ({ data, xPos, yPos }) => {
           <CodeIcon />
         </div>
         <div>
-          <p style={{ color: "yellow" }}>{data.label}</p>
-          <p>
+          <p style={{ color: "yellow", margin: "20px" }}>{data.label}</p>
+          <p
+            style={{
+              width: "auto",
+              fontSize: "18px",
+              color: "white",
+              margin: "20px",
+            }}
+          >
             x=
             {
               "{List1:[{name:'blessing',surname:'jackson'}{name:'bless',surname:'jack'}]}"

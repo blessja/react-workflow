@@ -10,3 +10,27 @@
   border-radius: 3px;
 }
 
+.start{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #166534;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  
+}
+
+.start p {
+  font-size: 25px;
+  font-family: Roboto 700;
+}
+
+.ha{
+  background-color: red;
+}
+
+.ct{
+  border-radius: 30%;
+}
+

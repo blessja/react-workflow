@@ -1,17 +1,22 @@
 import { memo, FC, CSSProperties } from "react";
 import { Handle, Position, NodeProps } from "reactflow";
-import GTranslateIcon from "@material-ui/icons/GTranslate";
+import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 
-const sourceHandleStyleA: CSSProperties = { left: 50 };
+const sourceHandleStyleA: CSSProperties = { left: 100 };
 const sourceHandleStyleB: CSSProperties = {
-  right: 50,
+  right: 20,
   left: "auto",
 };
+const sourceHandleStyleC: CSSProperties = { left: 30 };
 
 const CustomNode5: FC<NodeProps> = ({ data, xPos, yPos }) => {
   return (
     <>
-      <Handle type="target" position={Position.Top} />
+      <Handle
+        type="target"
+        position={Position.Top}
+        style={sourceHandleStyleA}
+      />
       <div
         style={{
           display: "flex",
@@ -28,21 +33,12 @@ const CustomNode5: FC<NodeProps> = ({ data, xPos, yPos }) => {
             width: "50px",
           }}
         >
-          <GTranslateIcon />
+          <CheckCircleOutlineIcon />
         </div>
-        <div style={{ backgroundColor: "#3f3f46" }}>
-          <p style={{ color: "white" }}>Recognize text Google</p>
-        </div>
-        <div
-          style={{
-            backgroundColor: "#38bdf8",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "50px",
-          }}
-        >
-          <GTranslateIcon />
+        <div style={{ backgroundColor: "#3f3f46", width: "150px" }}>
+          <p className="ct" style={{ color: "white", padding: "10px" }}>
+            Execute js code
+          </p>
         </div>
       </div>
 
@@ -53,6 +49,7 @@ const CustomNode5: FC<NodeProps> = ({ data, xPos, yPos }) => {
         style={sourceHandleStyleA}
       />
       <Handle
+        className="ha"
         type="source"
         position={Position.Bottom}
         id="b"

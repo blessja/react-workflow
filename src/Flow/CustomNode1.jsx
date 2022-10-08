@@ -21,7 +21,7 @@ const CustomNode1: FC<NodeProps> = ({ data, xPos, yPos }) => {
       >
         <div
           style={{
-            backgroundColor: "#475569",
+            backgroundColor: "#075985",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -31,8 +31,14 @@ const CustomNode1: FC<NodeProps> = ({ data, xPos, yPos }) => {
           <MergeTypeIcon />
         </div>
         <div>
-          <p>
-            <p style={{ color: "yellow" }}>{data.label}</p>
+          <p style={{ color: "yellow", margin: "20px" }}>{data.label}</p>
+          <p
+            style={{
+              width: "auto",
+              fontSize: "18px",
+              margin: "10px",
+            }}
+          >
             If <strong>condition</strong> then
           </p>
         </div>

@@ -1,10 +1,10 @@
 import { memo, FC, CSSProperties } from "react";
 import { Handle, Position, NodeProps } from "reactflow";
-import MergeTypeIcon from "@material-ui/icons/MergeType";
+import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 
 const sourceHandleStyleA: CSSProperties = { left: 50 };
 const sourceHandleStyleB: CSSProperties = {
-  right: 50,
+  right: 20,
   left: "auto",
 };
 
@@ -21,19 +21,18 @@ const CustomNode8: FC<NodeProps> = ({ data, xPos, yPos }) => {
       >
         <div
           style={{
-            backgroundColor: "#475569",
+            backgroundColor: "#38bdf8",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             width: "50px",
           }}
         >
-          <MergeTypeIcon />
+          <CheckCircleOutlineIcon />
         </div>
         <div>
-          <p>
-            <p style={{ color: "yellow" }}>{data.label}</p>
-            If <strong>condition</strong> then
+          <p className="ct" style={{ color: "white", padding: "10px" }}>
+            Execute js code
           </p>
         </div>
       </div>
@@ -45,6 +44,7 @@ const CustomNode8: FC<NodeProps> = ({ data, xPos, yPos }) => {
         style={sourceHandleStyleA}
       />
       <Handle
+        className="ha"
         type="source"
         position={Position.Bottom}
         id="b"

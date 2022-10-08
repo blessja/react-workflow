@@ -1,10 +1,10 @@
 import { memo, FC, CSSProperties } from "react";
 import { Handle, Position, NodeProps } from "reactflow";
-import MergeTypeIcon from "@material-ui/icons/MergeType";
+import AccessTimeIcon from "@material-ui/icons/AccessTime";
 
 const sourceHandleStyleA: CSSProperties = { left: 50 };
 const sourceHandleStyleB: CSSProperties = {
-  right: 50,
+  right: 20,
   left: "auto",
 };
 
@@ -21,19 +21,26 @@ const CustomNode6: FC<NodeProps> = ({ data, xPos, yPos }) => {
       >
         <div
           style={{
-            backgroundColor: "#475569",
+            backgroundColor: "#3f6212",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             width: "50px",
           }}
         >
-          <MergeTypeIcon />
+          <AccessTimeIcon />
         </div>
         <div>
-          <p>
-            <p style={{ color: "yellow" }}>{data.label}</p>
-            If <strong>condition</strong> then
+          <p style={{ color: "yellow", margin: "10px" }}>{data.label}</p>
+          <p
+            style={{
+              width: "60px",
+              fontSize: "18px",
+              color: "white",
+              margin: "10px",
+            }}
+          >
+            Delay
           </p>
         </div>
       </div>
@@ -45,6 +52,7 @@ const CustomNode6: FC<NodeProps> = ({ data, xPos, yPos }) => {
         style={sourceHandleStyleA}
       />
       <Handle
+        className="ha"
         type="source"
         position={Position.Bottom}
         id="b"
